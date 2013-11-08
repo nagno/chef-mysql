@@ -41,4 +41,7 @@ when 'rhel'
   # RHEL/CentOS mysql package does not support this option.
   default['mysql']['tunable']['innodb_adaptive_flushing'] = false
   default['mysql']['server']['skip_federated'] = false
+
+  # Make the service name configurable again. Some of the MySQL 5.6 releases use mysql as service name instead of mysqld
+  default['mysql']['service_name'] = 'mysqld'
 end
